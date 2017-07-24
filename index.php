@@ -17,25 +17,26 @@
 get_header(); ?>
 
 
-
-    <div class="columns">
+    <div id="content" class="site-content">
+        <div id="columns" class="columns">
         <?php if(have_posts()) :
-          $counter=0;
-          while(have_posts() && $counter<9) : the_post();
-          $counter++; 
-    ?>
+        $counter=0;
+        while(have_posts() && $counter<9) : the_post();
+        $counter++; 
+        ?>
 
-        <div class="post">
-            <?php the_post_thumbnail(array(325));?>
-            <h2>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php the_title(); ?>
-                </a>
-            </h2>
+            <div class="post">
+                <?php the_post_thumbnail(array(325));?>
+                <h2>
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <?php the_title(); ?>
+                    </a>
+                </h2>
+            </div>
+            <?php endwhile; ?>
         </div>
-        <?php endwhile; ?>
-    </div>
-    <?php
+        </div>
+        <?php
     // Previous/next page navigation.
 			the_posts_pagination( array(
                 'post_type'              => 'post',
@@ -47,12 +48,7 @@ get_header(); ?>
 		else :
 			get_template_part( 'content', 'none' );
 ?>
-        <?php endif; ?>
-        </div>
+            <?php endif; ?>
+    </div>
 
-
-        <!--
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptate ipsum, veniam ab alias aperiam magnam tempore ducimus cumque ut, adipisci minus assumenda dolorem! Voluptas optio nisi eius dignissimos ab.
--->
-
-        <?php get_footer(); ?>
+    <?php get_footer(); ?>

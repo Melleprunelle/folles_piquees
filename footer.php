@@ -26,7 +26,7 @@
 				?>
 			</nav><!-- .social-navigation -->			
 		<?php endif; ?>	
-			<a href="<?php echo esc_url( __( 'http://lise-poirier.fr/', 'Les folles piquées' ) ); ?>"><?php printf( __( 'Produit par %s', 'maroquinerie' ), 'Lise Poirier - Web Développeur' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://lise-poirier.fr/', 'Les folles piquées' ) ); ?>"><?php printf( __( 'Produit par %s'), 'Lise Poirier - Web Développeur' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
